@@ -1,9 +1,15 @@
 import "./App.css";
-import Counter from "./components/TestPage";
+import Test from "./components/TestPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="/gallery/video" element={<DrawingVideo />} /> */}
+          <Route path="/" element={<Test />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
