@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import combinedReducers from "./reducers/combinedReducers";
 import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 const store = createStore(
   combinedReducers,
