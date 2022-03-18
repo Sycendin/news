@@ -1,0 +1,13 @@
+.stroke-text {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  border-radius: 2px;
+
+  background: rgba(245, 245, 245, 0.5);
+}
+.carousel-control-prev-icon {
+  background-image: url("https://cdn.discordapp.com/attachments/788247984517283880/954260929263067166/prevarrow.png") !important;
+}
+.carousel-control-next-icon {
+  background-image: url("https://cdn.discordapp.com/attachments/788247984517283880/954260929636364398/nextarrow.png") !important;
+}
