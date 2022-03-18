@@ -5,6 +5,7 @@ import Header from "./Header/Header";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Backgroundimage from "./BackgroundImage/BackgroundImage";
+import TopStories from "./TopStories/TopStories";
 const Home = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counterReducer);
@@ -15,6 +16,7 @@ const Home = () => {
     <Fragment>
       <Header></Header>
       <Backgroundimage />
+      <TopStories></TopStories>
     </Fragment>
   );
 };
