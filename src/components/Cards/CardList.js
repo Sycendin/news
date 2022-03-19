@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import storiesData from "../Home/TopStories/StoriesData";
 import SingleCard from "./Card";
 const CardList = ({ info }) => {
   return (
