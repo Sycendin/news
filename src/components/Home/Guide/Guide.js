@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import CardList from "../../Cards/CardList";
-import storiesData from "./StoriesData";
-const TopStories = () => {
+import guideData from "./GuideData";
+const Guide = () => {
   return (
     <Fragment>
       <div
@@ -18,11 +18,11 @@ const TopStories = () => {
             fontWeight: "bold",
           }}
         >
-          Today's Top stories
+          Latest Guides
         </h1>
-        <CardList info={storiesData} />
+        <CardList info={guideData} />
       </div>
     </Fragment>
   );
 };
-export default TopStories;
+export default Guide;

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Backgroundimage from "./BackgroundImage/BackgroundImage";
 import TopStories from "./TopStories/TopStories";
+import Guide from "./Guide/Guide";
 const Home = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counterReducer);
@@ -17,6 +18,7 @@ const Home = () => {
       <Header></Header>
       <Backgroundimage />
       <TopStories></TopStories>
+      <Guide></Guide>
     </Fragment>
   );
 };
