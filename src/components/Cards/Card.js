@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Card } from "react-bootstrap";
 import "./Card.css";
-const StoryCard = ({ title, image }) => {
+const SingleCard = ({ title, image }) => {
   return (
     <Fragment>
       <Card style={{ width: 284, backgroundColor: "rgba(0, 0, 0, 0.1)" }}>
@@ -11,4 +11,4 @@ const StoryCard = ({ title, image }) => {
     </Fragment>
   );
 };
-export default StoryCard;
+export default SingleCard;
