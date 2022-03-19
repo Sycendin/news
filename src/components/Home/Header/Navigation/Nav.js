@@ -16,16 +16,18 @@ const Navigation = () => {
         <Container>
           <img
             src={process.env.PUBLIC_URL + "/images/logo.png"}
-            width="100"
-            height="100"
+            width="50"
+            height="50"
           ></img>
-          <Navbar.Brand href="#home">Game News Site</Navbar.Brand>
+          <Navbar.Brand style={{ marginLeft: 10 }} href="#home">
+            Game News Site
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <Nav.Link href="#features">News</Nav.Link>
+              <Nav.Link href="#pricing">Reviews</Nav.Link>
+              <NavDropdown title="More" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -40,9 +42,9 @@ const Navigation = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
+              <Nav.Link href="#deets">Terms</Nav.Link>
               <Nav.Link eventKey={2} href="#memes">
-                Dank memes
+                Contact
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

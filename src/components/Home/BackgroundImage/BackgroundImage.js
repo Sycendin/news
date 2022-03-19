@@ -6,13 +6,13 @@ const Backgroundimage = () => {
     <Fragment>
       <Carousel
         variant="light"
+        prevIcon
         interval={5000}
         style={{
           width: "66%",
           marginLeft: "auto",
           marginRight: "auto",
           borderRadius: 10,
-          color: "green",
         }}
       >
         <Carousel.Item
