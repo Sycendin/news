@@ -1,18 +1,23 @@
 import React, { Fragment } from "react";
 import SingleCard from "./Card";
-const CardList = ({ info }) => {
+const CardList = ({ info, displayDirection, marginColumn }) => {
   return (
     <Fragment>
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: displayDirection,
           justifyContent: "space-evenly",
         }}
       >
         {info.map((data, i) => {
           return (
-            <SingleCard key={i} title={info[i].title} image={info[i].image} />
+            <SingleCard
+              key={i}
+              title={info[i].title}
+              image={info[i].image}
+              marginColumn={marginColumn}
+            />
           );
         })}
       </div>

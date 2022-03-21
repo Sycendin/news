@@ -39,7 +39,6 @@ const Backgroundimage = () => {
         <Carousel.Item
           style={{
             width: "100%",
-
             borderRadius: 10,
           }}
         >
@@ -61,7 +60,6 @@ const Backgroundimage = () => {
         <Carousel.Item
           style={{
             width: "100%",
-
             borderRadius: 10,
           }}
         >

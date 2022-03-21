@@ -20,7 +20,7 @@ const Guide = () => {
         >
           Latest Guides
         </h1>
-        <CardList info={guideData} />
+        <CardList info={guideData} displayDirection="row" />
         <div
           style={{
             width: "100%",

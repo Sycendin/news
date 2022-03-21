@@ -8,7 +8,7 @@ const guideData = [
     image: "/images/guide/tunic.jpg",
   },
   {
-    title: "Gying Light 2 Guide",
+    title: "Dying Light 2 Guide",
     image: "/images/guide/dyinglight2.jpg",
   },
   {
