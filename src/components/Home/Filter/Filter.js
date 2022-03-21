@@ -54,7 +54,6 @@ const Filter = () => {
             marginLeft: 10,
             display: "flex",
             justifyContent: "left",
-            width: "100%",
           }}
         >
           <CardList info={data} displayDirection="column" marginColumn={20} />
