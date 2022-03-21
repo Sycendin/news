@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Backgroundimage from "./BackgroundImage/BackgroundImage";
 import TopStories from "./TopStories/TopStories";
 import Guide from "./Guide/Guide";
+import Filter from "./Filter/Filter";
 const Home = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counterReducer);
@@ -17,8 +18,9 @@ const Home = () => {
     <Fragment>
       <Header></Header>
       <Backgroundimage />
-      <TopStories></TopStories>
-      <Guide></Guide>
+      <TopStories />
+      <Guide />
+      <Filter />
     </Fragment>
   );
 };

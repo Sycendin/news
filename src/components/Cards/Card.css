@@ -1,5 +1,5 @@
 .card {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-out;
   border-radius: 10px;
 }
 
@@ -7,4 +7,6 @@
   color: rgb(78, 124, 221);
   transform: scale(1.1);
   text-decoration: underline;
+  z-index: 1000;
+  cursor: pointer;
 }
