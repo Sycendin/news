@@ -1,7 +1,7 @@
 const pcData = [
   {
-    title: "Sony Announces New PS5 Model",
-    image: "/images/filter/ps5.jpg",
+    title: "Steamdeck Release Date Announced",
+    image: "/images/filter/steamdeck.jpg",
   },
   {
     title: "Top 10 Indie Games You Should Play",

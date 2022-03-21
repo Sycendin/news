@@ -16,6 +16,7 @@ const SingleCard = ({ i, title, image, marginColumn }) => {
         <Card.Img variant="top" src={process.env.PUBLIC_URL + image} />
         <Card.Title>{title}</Card.Title>
       </Card>
+      )
     </Fragment>
   );
 };
