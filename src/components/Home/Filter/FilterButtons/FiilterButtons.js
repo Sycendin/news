@@ -18,16 +18,32 @@ const FilterButtons = () => {
   };
   return (
     <Fragment>
-      <Button onClick={() => changeFilter("nintendo")} variant="dark">
+      <Button
+        style={{ marginLeft: 20, marginRight: 10, borderRadius: 20 }}
+        onClick={() => changeFilter("nintendo")}
+        variant="dark"
+      >
         NINTENDO
       </Button>{" "}
-      <Button onClick={() => changeFilter("playstation")} variant="dark">
+      <Button
+        style={{ marginRight: 10, borderRadius: 20 }}
+        onClick={() => changeFilter("playstation")}
+        variant="dark"
+      >
         PlayStation
       </Button>{" "}
-      <Button onClick={() => changeFilter("xbox")} variant="dark">
+      <Button
+        style={{ marginRight: 10, borderRadius: 20 }}
+        onClick={() => changeFilter("xbox")}
+        variant="dark"
+      >
         XBOX
       </Button>{" "}
-      <Button onClick={() => changeFilter("pc")} variant="dark">
+      <Button
+        style={{ marginRight: 10, borderRadius: 20 }}
+        onClick={() => changeFilter("pc")}
+        variant="dark"
+      >
         PC
       </Button>{" "}
     </Fragment>

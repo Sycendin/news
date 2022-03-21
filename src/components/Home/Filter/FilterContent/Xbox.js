@@ -1,7 +1,7 @@
 const xboxData = [
   {
     title: "Xbox Announces New XBOX Model",
-    image: "/images/filter/xbox.jpg",
+    image: "/images/filter/xboxseriesx.jpg",
   },
   {
     title: "Top 10 Indie Games You Should Play",
