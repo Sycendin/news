@@ -23,7 +23,7 @@ const FilterButtons = () => {
         onClick={() => changeFilter("nintendo")}
         variant="dark"
       >
-        NINTENDO
+        Nintendo
       </Button>{" "}
       <Button
         style={{ marginRight: 10, borderRadius: 20 }}
