@@ -11,7 +11,9 @@ const CardList = ({ info }) => {
         }}
       >
         {info.map((data, i) => {
-          return <SingleCard title={info[i].title} image={info[i].image} />;
+          return (
+            <SingleCard key={i} title={info[i].title} image={info[i].image} />
+          );
         })}
       </div>
     </Fragment>

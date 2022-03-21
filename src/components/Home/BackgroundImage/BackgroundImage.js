@@ -28,7 +28,7 @@ const Backgroundimage = () => {
               marginRight: "auto",
               borderRadius: 10,
             }}
-            responsive
+            responsive="true"
           ></Image>
           <Carousel.Caption>
             <h3 className="stroke-text">Elden Ring</h3>
@@ -45,7 +45,7 @@ const Backgroundimage = () => {
         >
           <Image
             src={process.env.PUBLIC_URL + "/images/ghostwire.jpg"}
-            responsive
+            responsive="true"
             style={{
               width: "100%",
               marginLeft: "auto",
@@ -73,7 +73,7 @@ const Backgroundimage = () => {
               marginRight: "auto",
               borderRadius: 10,
             }}
-            responsive
+            responsive="true"
           ></Image>
           <Carousel.Caption>
             <h3 className="stroke-text">Kirby and the Forgotten Land</h3>
