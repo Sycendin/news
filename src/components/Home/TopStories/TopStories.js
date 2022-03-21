@@ -20,7 +20,7 @@ const TopStories = () => {
         >
           Today's Top stories
         </h1>
-        <CardList info={storiesData} />
+        <CardList info={storiesData} displayDirection="row" />
         <div
           style={{
             width: "100%",

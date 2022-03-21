@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Card } from "react-bootstrap";
 import "./Card.css";
-const SingleCard = ({ i, title, image }) => {
+const SingleCard = ({ i, title, image, marginColumn }) => {
   return (
     <Fragment>
       <Card
@@ -10,6 +10,7 @@ const SingleCard = ({ i, title, image }) => {
         style={{
           width: 284,
           backgroundColor: " rgb(212, 214, 215)",
+          marginBottom: marginColumn,
         }}
       >
         <Card.Img variant="top" src={process.env.PUBLIC_URL + image} />
