@@ -5,8 +5,6 @@ const Backgroundimage = () => {
   return (
     <Fragment>
       <Carousel
-        variant="light"
-        prevIcon
         interval={5000}
         style={{
           width: "66%",

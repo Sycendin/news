@@ -7,7 +7,7 @@ const Guide = () => {
       <div
         style={{
           width: "100%",
-          backgroundColor: " rgba(0, 0, 0, 0.2)",
+          backgroundColor: "rgb(212, 214, 215)",
           marginTop: 50,
         }}
       >
@@ -21,6 +21,14 @@ const Guide = () => {
           Latest Guides
         </h1>
         <CardList info={guideData} />
+        <div
+          style={{
+            width: "100%",
+            height: 30,
+            marginBottom: 50,
+            backgroundColor: "rgb(212, 214, 215)",
+          }}
+        ></div>
       </div>
     </Fragment>
   );
