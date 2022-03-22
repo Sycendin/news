@@ -16,7 +16,6 @@ const Home = () => {
   };
   return (
     <Fragment>
-      <Header></Header>
       <Backgroundimage />
       <TopStories />
       <Guide />

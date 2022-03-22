@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Image, Carousel, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./BackgroundImage.css";
 const Backgroundimage = () => {
   return (
@@ -32,10 +33,12 @@ const Backgroundimage = () => {
           ></Image>
           <Carousel.Caption>
             <h3 className="stroke-text">Elden Ring</h3>
-
-            <Button>Check it Out.</Button>
+            <Link to="/elden">
+              <Button>Check it Out.</Button>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item
           style={{
             width: "100%",
@@ -54,6 +57,7 @@ const Backgroundimage = () => {
           ></Image>
           <Carousel.Caption>
             <h3 className="stroke-text">Ghostwire Tokyo</h3>
+
             <Button>Check it Out.</Button>
           </Carousel.Caption>
         </Carousel.Item>
