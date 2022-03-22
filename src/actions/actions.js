@@ -39,3 +39,10 @@ export const other = (num = 0) => {
     payload: num,
   };
 };
+
+export const changeBanner = (url = 0) => {
+  return {
+    type: "CHANGE_BANNER",
+    payload: url,
+  };
+};
