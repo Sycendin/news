@@ -8,6 +8,8 @@ export const filterSelect = (state = "NINTENDO", action) => {
       return (state = "XBOX");
     case "PC":
       return (state = "PC");
+    case "OTHER":
+      return (state = "OTHER");
     default:
       return state;
   }

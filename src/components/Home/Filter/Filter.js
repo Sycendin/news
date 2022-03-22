@@ -6,6 +6,7 @@ import playstationData from "./FilterContent/Playstation";
 import pcData from "./FilterContent/PC";
 import CardList from "../../Cards/CardList";
 import xboxData from "./FilterContent/Xbox";
+import otherData from "./FilterContent/Other";
 const Filter = () => {
   let data = nintendoData;
   const select = useSelector((state) => state.filterSelect);
@@ -15,6 +16,8 @@ const Filter = () => {
     data = playstationData;
   } else if (select === "XBOX") {
     data = xboxData;
+  } else if (select === "OTHER") {
+    data = otherData;
   } else {
     data = pcData;
   }

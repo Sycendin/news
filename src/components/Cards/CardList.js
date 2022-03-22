@@ -17,6 +17,7 @@ const CardList = ({ info, displayDirection, marginColumn }) => {
               title={info[i].title}
               image={info[i].image}
               marginColumn={marginColumn}
+              text={info[i].text}
             />
           );
         })}

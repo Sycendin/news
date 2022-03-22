@@ -1,7 +1,13 @@
 import React, { Fragment } from "react";
 import { Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-import { nintendo, xbox, playStation, pc } from "../../../../actions/actions";
+import {
+  nintendo,
+  xbox,
+  playStation,
+  pc,
+  other,
+} from "../../../../actions/actions";
 const FilterButtons = () => {
   const dispatch = useDispatch();
   // const counter = useSelector((state) => state.counterReducer);
@@ -12,6 +18,8 @@ const FilterButtons = () => {
       dispatch(playStation());
     } else if (filter === "xbox") {
       dispatch(xbox());
+    } else if (filter === "other") {
+      dispatch(other());
     } else {
       dispatch(pc());
     }
@@ -45,6 +53,13 @@ const FilterButtons = () => {
         variant="dark"
       >
         PC
+      </Button>{" "}
+      <Button
+        style={{ marginRight: 10, borderRadius: 20 }}
+        onClick={() => changeFilter("other")}
+        variant="dark"
+      >
+        OTHER
       </Button>{" "}
     </Fragment>
   );

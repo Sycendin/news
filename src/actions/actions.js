@@ -32,3 +32,10 @@ export const pc = (num = 0) => {
     payload: num,
   };
 };
+
+export const other = (num = 0) => {
+  return {
+    type: "OTHER",
+    payload: num,
+  };
+};

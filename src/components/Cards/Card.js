@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Card } from "react-bootstrap";
 import "./Card.css";
-const SingleCard = ({ i, title, image, marginColumn }) => {
+const SingleCard = ({ i, title, image, marginColumn, text }) => {
   return (
     <Fragment>
       {marginColumn !== 20 ? (
@@ -46,7 +46,7 @@ const SingleCard = ({ i, title, image, marginColumn }) => {
             }}
           >
             <h3 style={{ marginTop: 10, marginLeft: 10 }}>{title}</h3>
-            <p style={{ marginLeft: 10 }}>Sample Text</p>
+            <p style={{ marginLeft: 10 }}>{text}</p>
           </div>
         </div>
       )}
