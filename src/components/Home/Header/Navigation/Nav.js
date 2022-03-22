@@ -12,7 +12,13 @@ const Navigation = () => {
   };
   return (
     <Fragment>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+        style={{ marginBottom: 10 }}
+      >
         <Container>
           <img
             src={process.env.PUBLIC_URL + "/images/logo.png"}
