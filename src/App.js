@@ -12,7 +12,7 @@ function App() {
         <Routes>
           {/* <Route path="/gallery/video" element={<DrawingVideo />} /> */}
           <Route path="/" element={<Home />} />
-          <Route path="/elden" element={<BannerPage />} />
+          <Route path="/banner/:article" element={<BannerPage />} />
         </Routes>
       </BrowserRouter>
     </div>
