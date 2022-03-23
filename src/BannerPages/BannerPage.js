@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Image from "react-bootstrap/Image";
 import { useSelector } from "react-redux";
 import bannerData from "./BannerPageData/BannerData";
+import TextList from "../components/TextList/TextList";
 const BannerPage = () => {
   const select = useSelector((state) => state.bannerChange);
   return (
@@ -74,8 +75,10 @@ const BannerPage = () => {
             | Posted: March 22, 2022
           </p>
         </div>
-
-        <h3 style={{ whiteSpace: "pre-line" }}>{bannerData[select].text}</h3>
+        <div>
+          <TextList data={bannerData[select].text} />
+        </div>
+        {/* <h3 style={{ whiteSpace: "pre-line" }}>{bannerData[select].text}</h3> */}
       </div>
     </Fragment>
   );

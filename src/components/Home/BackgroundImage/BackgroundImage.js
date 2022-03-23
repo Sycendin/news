@@ -8,7 +8,6 @@ const Backgroundimage = () => {
   const dispatch = useDispatch();
   // const counter = useSelector((state) => state.counterReducer);
   const change = (filter) => {
-    console.log(filter);
     if (filter === 0) {
       dispatch(changeBanner(0));
     } else if (filter === 1) {
