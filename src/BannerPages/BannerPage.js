@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import Image from "react-bootstrap/Image";
-
 import { useSelector } from "react-redux";
 import bannerData from "./BannerPageData/BannerData";
 const BannerPage = () => {

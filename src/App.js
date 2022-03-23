@@ -3,6 +3,7 @@ import Test from "./components/TestPage";
 import Home from "./components/Home/Home";
 import BannerPage from "./BannerPages/BannerPage";
 import Header from "./components/Home/Header/Header";
+import NotFound from "./components/NotFound/NotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/gallery/video" element={<DrawingVideo />} /> */}
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/banner/:article" element={<BannerPage />} />
         </Routes>
