@@ -25,9 +25,14 @@ const Navigation = () => {
             width="50"
             height="50"
           ></img>
-          <Navbar.Brand style={{ marginLeft: 10 }} href="#home">
-            Game News Site
+
+          <Navbar.Brand style={{ marginLeft: 10 }}>
+            {" "}
+            <Nav.Link style={{ color: "white" }} href="/">
+              Game News Site
+            </Nav.Link>
           </Navbar.Brand>
+
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
