@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import CardList from "../../Cards/CardList";
 import storiesData from "./StoriesData";
+// import { useDispatch } from "react-redux";
+// import { Link } from "react-router-dom";
 const TopStories = () => {
   return (
     <Fragment>
@@ -20,7 +22,7 @@ const TopStories = () => {
         >
           Today's Top stories
         </h1>
-        <CardList info={storiesData} displayDirection="row" />
+        <CardList type={"top"} info={storiesData} displayDirection="row" />
         <div
           style={{
             width: "100%",

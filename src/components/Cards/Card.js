@@ -1,22 +1,58 @@
 import React, { Fragment } from "react";
 import { Card } from "react-bootstrap";
 import "./Card.css";
-const SingleCard = ({ i, title, image, marginColumn, text }) => {
+import { useDispatch } from "react-redux";
+import { changeTopStories, changeGuides } from "../../actions/actions";
+import { Link } from "react-router-dom";
+const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
+  const dispatch = useDispatch();
+  // const counter = useSelector((state) => state.counterReducer);
+  const change = (filter) => {
+    if (filter === 0) {
+      if (type === "top") {
+        dispatch(changeTopStories(0));
+      } else {
+        dispatch(changeGuides(0));
+      }
+    } else if (filter === 1) {
+      if (type === "top") {
+        dispatch(changeTopStories(0));
+      } else {
+        dispatch(changeGuides(0));
+      }
+    } else if (filter === 2) {
+      if (type === "top") {
+        dispatch(changeTopStories(0));
+      } else {
+        dispatch(changeGuides(0));
+      }
+    } else if (filter === 3) {
+      if (type === "top") {
+        dispatch(changeTopStories(0));
+      } else {
+        dispatch(changeGuides(0));
+      }
+    }
+  };
+
   return (
     <Fragment>
       {marginColumn !== 20 ? (
-        <Card
-          key={i}
-          border="dark"
-          style={{
-            width: 284,
-            backgroundColor: " rgb(212, 214, 215)",
-            marginBottom: marginColumn,
-          }}
-        >
-          <Card.Img variant="top" src={process.env.PUBLIC_URL + image} />
-          <Card.Title>{title}</Card.Title>
-        </Card>
+        <Link to={"/article/" + title}>
+          <Card
+            onClick={() => change(i)}
+            key={i}
+            border="dark"
+            style={{
+              width: 284,
+              backgroundColor: " rgb(212, 214, 215)",
+              marginBottom: marginColumn,
+            }}
+          >
+            <Card.Img variant="top" src={process.env.PUBLIC_URL + image} />
+            <Card.Title style={{ color: "black" }}>{title}</Card.Title>
+          </Card>
+        </Link>
       ) : (
         <div
           className="block-example border-bottom border-dark"
