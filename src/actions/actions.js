@@ -46,3 +46,15 @@ export const changeBanner = (url = 0) => {
     payload: url,
   };
 };
+export const changeTopStories = (url = 0) => {
+  return {
+    type: "CHANGE_TOPSTORIES",
+    payload: url,
+  };
+};
+export const changeGuides = (url = 0) => {
+  return {
+    type: "CHANGE_GUIDES",
+    payload: url,
+  };
+};

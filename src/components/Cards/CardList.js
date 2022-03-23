@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import SingleCard from "./Card";
-const CardList = ({ info, displayDirection, marginColumn }) => {
+const CardList = ({ type, info, displayDirection, marginColumn }) => {
   return (
     <Fragment>
       <div
@@ -18,6 +18,7 @@ const CardList = ({ info, displayDirection, marginColumn }) => {
               image={info[i].image}
               marginColumn={marginColumn}
               text={info[i].text}
+              type={type}
             />
           );
         })}
