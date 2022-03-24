@@ -5,6 +5,7 @@ import BannerPage from "./BannerPages/BannerPage";
 import Header from "./components/Home/Header/Header";
 import NotFound from "./components/NotFound/NotFound";
 import ArticleTopPage from "./components/Articles/ArticleTop";
+import ArticleGuidePage from "./components/Articles/ArticleGuides";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/banner/:article" element={<BannerPage />} />
           <Route path="/article/:article" element={<ArticleTopPage />} />
+          <Route path="/guide/:article" element={<ArticleGuidePage />} />
         </Routes>
       </BrowserRouter>
     </div>

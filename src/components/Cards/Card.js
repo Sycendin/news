@@ -4,33 +4,41 @@ import "./Card.css";
 import { useDispatch } from "react-redux";
 import { changeTopStories, changeGuides } from "../../actions/actions";
 import { Link } from "react-router-dom";
-const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
+const SingleCard = ({ i, title, image, marginColumn, text, type, index }) => {
+  let link = "";
+  if (type === "top") {
+    link = "/article/";
+  } else if (type === "guide") {
+    link = "/guide/";
+  }
   const dispatch = useDispatch();
   // const counter = useSelector((state) => state.counterReducer);
   const change = (filter) => {
-    if (filter === 0) {
+    console.log(index);
+    console.log(type);
+    if (index === 0) {
       if (type === "top") {
         dispatch(changeTopStories(0));
       } else {
         dispatch(changeGuides(0));
       }
-    } else if (filter === 1) {
+    } else if (index === 1) {
       if (type === "top") {
-        dispatch(changeTopStories(0));
+        dispatch(changeTopStories(1));
       } else {
-        dispatch(changeGuides(0));
+        dispatch(changeGuides(1));
       }
-    } else if (filter === 2) {
+    } else if (index === 2) {
       if (type === "top") {
-        dispatch(changeTopStories(0));
+        dispatch(changeTopStories(2));
       } else {
-        dispatch(changeGuides(0));
+        dispatch(changeGuides(2));
       }
-    } else if (filter === 3) {
+    } else if (index === 3) {
       if (type === "top") {
-        dispatch(changeTopStories(0));
+        dispatch(changeTopStories(3));
       } else {
-        dispatch(changeGuides(0));
+        dispatch(changeGuides(3));
       }
     }
   };
@@ -38,7 +46,7 @@ const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
   return (
     <Fragment>
       {marginColumn !== 20 ? (
-        <Link to={"/article/" + title}>
+        <Link to={link + title}>
           <Card
             onClick={() => change(i)}
             key={i}
