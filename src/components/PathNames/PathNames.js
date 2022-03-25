@@ -72,13 +72,11 @@ export const filterPaths = [
     type: "nintendo",
   },
   {
-    title: "/filter/Pokemon%20Arceus%20Sells%201%20Million%20Copies",
+    path: "/filter/Pokemon%20Arceus%20Sells%201%20Million%20Copies",
     content: 3,
     type: "nintendo",
   },
-
   //
-
   {
     path: "/filter/Sony%20Announces%20New%20PS5%20Model",
     content: 0,
@@ -119,13 +117,13 @@ export const filterPaths = [
     type: "xbox",
   },
   {
-    title:
-      "/filter/Elden%20Ring%20Player%20Finds%20Hidden%20Wall%20After%20Hitting%20It%2050%20Times",
+    path: "/filter/Elden%20Ring%20Player%20Finds%20Hidden%20Wall%20After%20Hitting%20It%2050%20Times",
+
     content: 3,
     type: "xbox",
   },
   {
-    title: "/filter/Fans%20Upset%20Over%20Halo%20Infinite's%20Current%20State",
+    path: "/filter/Fans%20Upset%20Over%20Halo%20Infinite's%20Current%20State",
     content: 4,
     type: "xbox",
   },
@@ -146,8 +144,7 @@ export const filterPaths = [
     type: "pc",
   },
   {
-    title:
-      "/filter/Elden%20Ring%20Player%20Finds%20Hidden%20Wall%20After%20Hitting%20It%2050%20Times",
+    path: "/filter/Elden%20Ring%20Player%20Finds%20Hidden%20Wall%20After%20Hitting%20It%2050%20Times",
     content: 3,
     type: "pc",
   },

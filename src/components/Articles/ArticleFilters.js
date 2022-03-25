@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import Image from "react-bootstrap/Image";
-import { useSelector, useDispatch } from "react-redux";
-import { nintendo, xbox, playStation, pc, other } from "../../actions/actions";
+
 import NotFound from "../NotFound/NotFound";
 import nintendoData from "../Home/Filter/FilterContent/Nintendo";
 import playstationData from "../Home/Filter/FilterContent/Playstation";
@@ -12,35 +11,34 @@ import { filterPaths } from "../PathNames/PathNames";
 const ArticleFiltersPage = () => {
   let error = false;
   let data = {};
-  const dispatch = useDispatch();
+  let select = 0;
+
   const currentUrl = window.location.pathname;
   let foundPath = filterPaths.find(
     (singlePath) => singlePath.path === currentUrl
   );
+
   // If url exists render page normally
   if (foundPath !== undefined) {
     if (foundPath.type === "nintendo") {
-      dispatch(nintendo(foundPath.content));
       data = nintendoData;
     } else if (foundPath.type === "playstation") {
-      dispatch(playStation(foundPath.content));
       data = playstationData;
     } else if (foundPath.type === "xbox") {
-      dispatch(xbox(foundPath.content));
       data = xboxData;
     } else if (foundPath.type === "pc") {
-      dispatch(pc(foundPath.content));
       data = pcData;
     } else if (foundPath.type === "other") {
-      dispatch(other(foundPath.content));
       data = otherData;
     }
+    select = foundPath.content;
   }
+
   // Otherwise set error to true to render the NotFound component instead
   else {
     error = true;
   }
-  const select = useSelector((state) => state.filterSelect);
+
   return (
     <Fragment>
       {error === false ? (
@@ -126,4 +124,5 @@ const ArticleFiltersPage = () => {
     </Fragment>
   );
 };
+
 export default ArticleFiltersPage;
