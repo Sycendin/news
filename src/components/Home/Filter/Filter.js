@@ -59,7 +59,12 @@ const Filter = () => {
             justifyContent: "left",
           }}
         >
-          <CardList info={data} displayDirection="column" marginColumn={20} />
+          <CardList
+            info={data}
+            displayDirection="column"
+            marginColumn={20}
+            type="filter"
+          />
         </div>
       </div>
     </Fragment>

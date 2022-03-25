@@ -54,3 +54,107 @@ export const guidePaths = [
     content: 3,
   },
 ];
+
+export const filterPaths = [
+  {
+    path: "/filter/Nintendo%20Teases%20New%20Switch%20Modal",
+    content: 0,
+    type: "nintendo",
+  },
+  {
+    path: "/filter/Top%2010%20Indie%20Games%20You%20Should%20Play",
+    content: 1,
+    type: "nintendo",
+  },
+  {
+    path: "/filter/Yu-Gi-Oh!%20Master%20Duel%20Update",
+    content: 2,
+    type: "nintendo",
+  },
+  {
+    title: "/filter/Pokemon%20Arceus%20Sells%201%20Million%20Copies",
+    content: 3,
+    type: "nintendo",
+  },
+
+  //
+
+  {
+    path: "/filter/Sony%20Announces%20New%20PS5%20Model",
+    content: 0,
+    type: "playstation",
+  },
+  {
+    path: "/filter/Top%2010%20Indie%20Games%20You%20Should%20Play",
+    content: 1,
+    type: "playstation",
+  },
+  {
+    path: "/filter/Yu-Gi-Oh!%20Master%20Duel%20Update",
+    content: 2,
+    type: "playstation",
+  },
+  {
+    title:
+      "/filter/Elden%20Ring%20Player%20Finds%20Hidden%20Wall%20After%20Hitting%20It%2050%20Times",
+    content: 3,
+    type: "playstation",
+  },
+
+  //
+
+  {
+    path: "/filter/Xbox%20Announces%20New%20PS5%20Model",
+    content: 0,
+    type: "xbox",
+  },
+  {
+    path: "/filter/Top%2010%20Indie%20Games%20You%20Should%20Play",
+    content: 1,
+    type: "xbox",
+  },
+  {
+    path: "/filter/Yu-Gi-Oh!%20Master%20Duel%20Update",
+    content: 2,
+    type: "xbox",
+  },
+  {
+    title:
+      "/filter/Elden%20Ring%20Player%20Finds%20Hidden%20Wall%20After%20Hitting%20It%2050%20Times",
+    content: 3,
+    type: "xbox",
+  },
+  {
+    title: "/filter/Fans%20Upset%20Over%20Halo%20Infinite's%20Current%20State",
+    content: 4,
+    type: "xbox",
+  },
+  //
+  {
+    path: "/filter/Steamdeck%20Release%20Date%20Announced",
+    content: 0,
+    type: "pc",
+  },
+  {
+    path: "/filter/Top%2010%20Indie%20Games%20You%20Should%20Play",
+    content: 1,
+    type: "pc",
+  },
+  {
+    path: "/filter/Yu-Gi-Oh!%20Master%20Duel%20Update",
+    content: 2,
+    type: "pc",
+  },
+  {
+    title:
+      "/filter/Elden%20Ring%20Player%20Finds%20Hidden%20Wall%20After%20Hitting%20It%2050%20Times",
+    content: 3,
+    type: "pc",
+  },
+  //
+  {
+    path: "/filter/Marvel%20Announces%20New%20DareDevil%20Game",
+    content: 0,
+    type: "other",
+  },
+];
