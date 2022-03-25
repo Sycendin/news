@@ -6,6 +6,7 @@ import Header from "./components/Home/Header/Header";
 import NotFound from "./components/NotFound/NotFound";
 import ArticleTopPage from "./components/Articles/ArticleTop";
 import ArticleGuidePage from "./components/Articles/ArticleGuides";
+import ArticleFiltersPage from "./components/Articles/ArticleFilters";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/banner/:article" element={<BannerPage />} />
           <Route path="/article/:article" element={<ArticleTopPage />} />
           <Route path="/guide/:article" element={<ArticleGuidePage />} />
+          <Route path="/filter/:article" element={<ArticleFiltersPage />} />
         </Routes>
       </BrowserRouter>
     </div>
