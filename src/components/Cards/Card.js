@@ -14,8 +14,6 @@ const SingleCard = ({ i, title, image, marginColumn, text, type, index }) => {
   const dispatch = useDispatch();
   // const counter = useSelector((state) => state.counterReducer);
   const change = (filter) => {
-    console.log(index);
-    console.log(type);
     if (index === 0) {
       if (type === "top") {
         dispatch(changeTopStories(0));

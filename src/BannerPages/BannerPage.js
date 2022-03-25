@@ -3,17 +3,20 @@ import Image from "react-bootstrap/Image";
 import { useDispatch, useSelector } from "react-redux";
 import bannerData from "./BannerPageData/BannerData";
 import TextList from "../components/TextList/TextList";
-import paths from "../components/PathNames/PathNames";
+import { paths } from "../components/PathNames/PathNames";
 import { changeBanner } from "../actions/actions";
 import NotFound from "../components/NotFound/NotFound";
 const BannerPage = () => {
   let error = false;
   const dispatch = useDispatch();
-  const stringPathName = window.location.pathname;
-  let obj = paths.find((o) => o.path === stringPathName);
-  if (obj !== undefined) {
-    dispatch(changeBanner(obj.content));
-  } else {
+  const currentUrl = window.location.pathname;
+  let foundPath = paths.find((singlePath) => singlePath.path === currentUrl);
+  // If url exists render page normally
+  if (foundPath !== undefined) {
+    dispatch(changeBanner(foundPath.content));
+  }
+  // Otherwise set error to true to render the NotFound component instead
+  else {
     error = true;
   }
   // dispatch(changeBanner(obj.content));
@@ -51,6 +54,7 @@ const BannerPage = () => {
           </h3>
           <img
             src={`${process.env.PUBLIC_URL + bannerData[select].image}`}
+            alt="banner"
             style={{
               width: "100%",
               marginLeft: "auto",
@@ -75,6 +79,7 @@ const BannerPage = () => {
               src={
                 "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
               }
+              alt="banner"
               roundedCircle={true}
               style={{
                 width: 50,
