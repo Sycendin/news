@@ -1,11 +1,12 @@
 import { useDispatch } from "react-redux";
 import { changeTopStories, changeGuides } from "../actions/actions";
 export const PathFinder = (paths, type) => {
+  console.log(paths);
   let error = false;
   const dispatch = useDispatch();
   const currentUrl = window.location.pathname;
   let foundPath = paths.find((singlePath) => singlePath.path === currentUrl);
-  console.log(foundPath);
+
   // If url exists render page normally
   if (foundPath !== undefined) {
     if (type === "top") {
