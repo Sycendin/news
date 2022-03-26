@@ -1,27 +1,15 @@
 import React, { Fragment } from "react";
 import Image from "react-bootstrap/Image";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { topStoriesPaths } from "../PathNames/PathNames";
-import { changeTopStories } from "../../actions/actions";
-// import bannerData from "./BannerPageData/BannerData";
-// import TextList from "../components/TextList/TextList";
 import storiesData from "../Home/TopStories/StoriesData";
 import NotFound from "../NotFound/NotFound";
+import { PathFinder } from "../../HelperFunctions/HelperFunctions";
 const ArticleTopPage = () => {
-  let error = false;
-  const dispatch = useDispatch();
-  const currentUrl = window.location.pathname;
-  let foundPath = topStoriesPaths.find(
-    (singlePath) => singlePath.path === currentUrl
-  );
-  // If url exists render page normally
-  if (foundPath !== undefined) {
-    dispatch(changeTopStories(foundPath.content));
-  }
-  // Otherwise set error to true to render the NotFound component instead
-  else {
-    error = true;
-  }
+  // Helper function checks the url and loads correct data based
+  // on what section it is
+  let foundPath = PathFinder(topStoriesPaths, "top");
+  let error = foundPath;
   const select = useSelector((state) => state.topStoriesChange);
   return (
     <Fragment>

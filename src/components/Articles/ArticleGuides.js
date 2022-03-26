@@ -1,27 +1,16 @@
 import React, { Fragment } from "react";
 import Image from "react-bootstrap/Image";
-import { useSelector, useDispatch } from "react-redux";
-import { changeGuides } from "../../actions/actions";
-// import bannerData from "./BannerPageData/BannerData";
-// import TextList from "../components/TextList/TextList";
+import { useSelector } from "react-redux";
 import { guidePaths } from "../PathNames/PathNames";
 import guideData from "../Home/Guide/GuideData";
 import NotFound from "../NotFound/NotFound";
+import { PathFinder } from "../../HelperFunctions/HelperFunctions";
 const ArticleGuidePage = () => {
-  let error = false;
-  const dispatch = useDispatch();
-  const currentUrl = window.location.pathname;
-  let foundPath = guidePaths.find(
-    (singlePath) => singlePath.path === currentUrl
-  );
-  // If url exists render page normally
-  if (foundPath !== undefined) {
-    dispatch(changeGuides(foundPath.content));
-  }
-  // Otherwise set error to true to render the NotFound component instead
-  else {
-    error = true;
-  }
+  // Helper function checks the url and loads correct data based
+  // on what section it is
+  let foundPath = PathFinder(guidePaths, "guide");
+  let error = foundPath;
+
   const select = useSelector((state) => state.guideChange);
   return (
     <Fragment>
