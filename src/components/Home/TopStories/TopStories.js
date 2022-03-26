@@ -23,15 +23,8 @@ const TopStories = () => {
         >
           Today's Top stories
         </h1>
+
         <CardList type={"top"} info={storiesData} displayDirection="row" />
-        <div
-          style={{
-            width: "100%",
-            height: 30,
-            marginBottom: 50,
-            backgroundColor: "rgb(212, 214, 215)",
-          }}
-        ></div>
       </div>
     </Fragment>
   );

@@ -1,5 +1,4 @@
 import "./App.css";
-import Test from "./components/TestPage";
 import Home from "./components/Home/Home";
 import BannerPage from "./BannerPages/BannerPage";
 import Header from "./components/Home/Header/Header";

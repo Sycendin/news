@@ -16,91 +16,102 @@ const Backgroundimage = () => {
       dispatch(changeBanner(2));
     }
   };
+
   return (
     <Fragment>
-      <Carousel
-        interval={5000}
+      <div
         style={{
           width: "66%",
           marginLeft: "auto",
           marginRight: "auto",
           borderRadius: 10,
+          backgroundColor: "black",
         }}
       >
-        <Carousel.Item
+        <Carousel
+          interval={5000}
           style={{
             width: "100%",
-
+            marginLeft: "auto",
+            marginRight: "auto",
             borderRadius: 10,
           }}
         >
-          <Image
-            src={process.env.PUBLIC_URL + "/images/background3.jpg"}
+          <Carousel.Item
             style={{
               width: "100%",
-              marginLeft: "auto",
-              marginRight: "auto",
+
               borderRadius: 10,
             }}
-            responsive="true"
-          ></Image>
-          <Carousel.Caption>
-            <h3 className="stroke-text">Elden Ring</h3>
-            <Link to="/banner/eldenring">
-              <Button onClick={() => change(0)}>Check it Out.</Button>
-            </Link>
-          </Carousel.Caption>
-        </Carousel.Item>
+          >
+            <Image
+              src={process.env.PUBLIC_URL + "/images/background3c.jpg"}
+              style={{
+                width: "100%",
+                marginLeft: "auto",
+                marginRight: "auto",
+                borderRadius: 10,
+              }}
+              responsive="true"
+            ></Image>
+            <Carousel.Caption>
+              <h3 className="stroke-text">Elden Ring</h3>
+              <Link to="/banner/eldenring">
+                <Button onClick={() => change(0)}>Check it Out.</Button>
+              </Link>
+            </Carousel.Caption>
+          </Carousel.Item>
 
-        <Carousel.Item
-          style={{
-            width: "100%",
-            borderRadius: 10,
-          }}
-        >
-          <Image
-            src={process.env.PUBLIC_URL + "/images/ghostwire.jpg"}
-            responsive="true"
+          <Carousel.Item
             style={{
               width: "100%",
-              marginLeft: "auto",
-              marginRight: "auto",
               borderRadius: 10,
             }}
-          ></Image>
-          <Carousel.Caption>
-            <h3 className="stroke-text">Ghostwire Tokyo</h3>
+          >
+            <Image
+              src={process.env.PUBLIC_URL + "/images/ghostwirec.jpg"}
+              responsive="true"
+              style={{
+                width: "100%",
+                marginLeft: "auto",
+                marginRight: "auto",
+                borderRadius: 10,
+              }}
+            ></Image>
+            <Carousel.Caption>
+              <h3 className="stroke-text">Ghostwire Tokyo</h3>
 
-            <Link to="/banner/ghostwire">
-              <Button onClick={() => change(1)}>Check it Out.</Button>
-            </Link>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item
-          style={{
-            width: "100%",
-            borderRadius: 10,
-          }}
-        >
-          <Image
-            src={process.env.PUBLIC_URL + "/images/kirby.jpg"}
+              <Link to="/banner/ghostwire">
+                <Button onClick={() => change(1)}>Check it Out.</Button>
+              </Link>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item
             style={{
               width: "100%",
-              marginLeft: "auto",
-              marginRight: "auto",
               borderRadius: 10,
             }}
-            responsive="true"
-          ></Image>
-          <Carousel.Caption>
-            <h3 className="stroke-text">Kirby and the Forgotten Land</h3>
+          >
+            <Image
+              src={process.env.PUBLIC_URL + "/images/kirbyc.jpg"}
+              style={{
+                width: "100%",
+                marginLeft: "auto",
+                marginRight: "auto",
+                borderRadius: 10,
+              }}
+              responsive="true"
+            ></Image>
+            <Carousel.Caption>
+              <h3 className="stroke-text">Kirby and the Forgotten Land</h3>
 
-            <Link to="/banner/kirby">
-              <Button onClick={() => change(2)}>Check it Out.</Button>
-            </Link>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>{" "}
+              <Link to="/banner/kirby">
+                <Button onClick={() => change(2)}>Check it Out.</Button>
+              </Link>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </Fragment>
   );
 };

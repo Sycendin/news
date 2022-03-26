@@ -13,7 +13,6 @@ const CardList = ({ type, info, displayDirection, marginColumn }) => {
         {info.map((data, i) => {
           return (
             <SingleCard
-              index={i}
               key={i}
               title={info[i].title}
               image={info[i].image}

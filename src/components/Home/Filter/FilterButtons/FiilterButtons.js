@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Button } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   nintendo,
   xbox,
@@ -26,41 +26,43 @@ const FilterButtons = () => {
   };
   return (
     <Fragment>
-      <Button
-        style={{ marginLeft: 20, marginRight: 10, borderRadius: 20 }}
-        onClick={() => changeFilter("nintendo")}
-        variant="dark"
-      >
-        Nintendo
-      </Button>{" "}
-      <Button
-        style={{ marginRight: 10, borderRadius: 20 }}
-        onClick={() => changeFilter("playstation")}
-        variant="dark"
-      >
-        PlayStation
-      </Button>{" "}
-      <Button
-        style={{ marginRight: 10, borderRadius: 20 }}
-        onClick={() => changeFilter("xbox")}
-        variant="dark"
-      >
-        XBOX
-      </Button>{" "}
-      <Button
-        style={{ marginRight: 10, borderRadius: 20 }}
-        onClick={() => changeFilter("pc")}
-        variant="dark"
-      >
-        PC
-      </Button>{" "}
-      <Button
-        style={{ marginRight: 10, borderRadius: 20 }}
-        onClick={() => changeFilter("other")}
-        variant="dark"
-      >
-        OTHER
-      </Button>{" "}
+      <div>
+        <Button
+          style={{ marginLeft: 20, marginRight: 10, borderRadius: 20 }}
+          onClick={() => changeFilter("nintendo")}
+          variant="dark"
+        >
+          Nintendo
+        </Button>{" "}
+        <Button
+          style={{ marginRight: 10, borderRadius: 20 }}
+          onClick={() => changeFilter("playstation")}
+          variant="dark"
+        >
+          PlayStation
+        </Button>{" "}
+        <Button
+          style={{ marginRight: 10, borderRadius: 20 }}
+          onClick={() => changeFilter("xbox")}
+          variant="dark"
+        >
+          XBOX
+        </Button>{" "}
+        <Button
+          style={{ marginRight: 10, borderRadius: 20 }}
+          onClick={() => changeFilter("pc")}
+          variant="dark"
+        >
+          PC
+        </Button>{" "}
+        <Button
+          style={{ marginRight: 10, borderRadius: 20 }}
+          onClick={() => changeFilter("other")}
+          variant="dark"
+        >
+          OTHER
+        </Button>{" "}
+      </div>
     </Fragment>
   );
 };

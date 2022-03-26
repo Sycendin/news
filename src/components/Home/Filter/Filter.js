@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import FilterButtons from "./FilterButtons/FiilterButtons";
 import nintendoData from "./FilterContent/Nintendo";
 import playstationData from "./FilterContent/Playstation";

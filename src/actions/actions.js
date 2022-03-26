@@ -58,3 +58,10 @@ export const changeGuides = (url = 0) => {
     payload: url,
   };
 };
+
+export const bannerLoad = (url = 0) => {
+  return {
+    type: "LOAD_BANNER",
+    payload: url,
+  };
+};

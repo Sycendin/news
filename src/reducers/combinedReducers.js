@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import { counterReducer } from "./counter";
 import { filterSelect } from "./filterSelect";
-import { bannerChange } from "./changeBanner";
+import { bannerChange, bannerLoading } from "./changeBanner";
 import { topStoriesChange } from "./changeTopStories";
 import { guideChange } from "./changeGuides";
 const combinedReducers = combineReducers({
@@ -12,5 +12,6 @@ const combinedReducers = combineReducers({
   bannerChange: bannerChange,
   guideChange: guideChange,
   topStoriesChange: topStoriesChange,
+  bannerLoading: bannerLoading,
 });
 export default combinedReducers;

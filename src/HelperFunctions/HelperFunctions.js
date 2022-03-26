@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { changeTopStories, changeGuides } from "../actions/actions";
 export const PathFinder = (paths, type) => {
-  console.log(paths);
   let error = false;
   const dispatch = useDispatch();
   const currentUrl = window.location.pathname;
