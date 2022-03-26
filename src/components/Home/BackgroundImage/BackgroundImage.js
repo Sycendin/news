@@ -46,7 +46,7 @@ const Backgroundimage = () => {
           ></Image>
           <Carousel.Caption>
             <h3 className="stroke-text">Elden Ring</h3>
-            <Link to="/banner/elden">
+            <Link to="/banner/eldenring">
               <Button onClick={() => change(0)}>Check it Out.</Button>
             </Link>
           </Carousel.Caption>

@@ -1,6 +1,6 @@
 export const paths = [
   {
-    path: "/banner/elden",
+    path: "/banner/eldenring",
     content: 0,
   },
   {
@@ -10,10 +10,6 @@ export const paths = [
   {
     path: "/banner/kirby",
     content: 2,
-  },
-  {
-    title: "Top 10 Indie Games You Should Play",
-    image: "/images/topstories/indie.jpg",
   },
 ];
 
@@ -31,7 +27,7 @@ export const topStoriesPaths = [
     content: 2,
   },
   {
-    title: "/article/Top%2010%20Indie%20Games%20You%20Should%20Play",
+    path: "/article/Top%2010%20Indie%20Games%20You%20Should%20Play",
     content: 3,
   },
 ];
@@ -50,7 +46,7 @@ export const guidePaths = [
     content: 2,
   },
   {
-    title: "/guide/Ghostwire%20Tokyo%20Guide",
+    path: "/guide/Ghostwire%20Tokyo%20Guide",
     content: 3,
   },
 ];
@@ -93,8 +89,7 @@ export const filterPaths = [
     type: "playstation",
   },
   {
-    title:
-      "/filter/Elden%20Ring%20Player%20Finds%20Hidden%20Wall%20After%20Hitting%20It%2050%20Times",
+    path: "/filter/Elden%20Ring%20Player%20Finds%20Hidden%20Wall%20After%20Hitting%20It%2050%20Times",
     content: 3,
     type: "playstation",
   },
