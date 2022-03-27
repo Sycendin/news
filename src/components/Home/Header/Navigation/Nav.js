@@ -1,15 +1,7 @@
 import React, { Fragment } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { increment } from "../../../../actions/actions";
-import { Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
+
 import { Nav, NavDropdown, Navbar, Container } from "react-bootstrap";
 const Navigation = () => {
-  const dispatch = useDispatch();
-  const counter = useSelector((state) => state.counterReducer);
-  const changeCounter = () => {
-    dispatch(increment(1));
-  };
   return (
     <Fragment>
       <Navbar
@@ -22,13 +14,14 @@ const Navigation = () => {
         <Container>
           <img
             src={process.env.PUBLIC_URL + "/images/logo.png"}
+            alt="logo"
             width="50"
             height="50"
           ></img>
 
           <Navbar.Brand style={{ marginLeft: 10 }}>
             {" "}
-            <Nav.Link style={{ color: "white" }} href="/">
+            <Nav.Link style={{ color: "white" }} href="/news/">
               Game News Site
             </Nav.Link>
           </Navbar.Brand>

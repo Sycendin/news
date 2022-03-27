@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
   let link = "";
   if (type === "top") {
-    link = "/article/";
+    link = "/news/article/";
   } else if (type === "guide") {
-    link = "/guide/";
+    link = "/news/guide/";
   } else if (type === "filter") {
-    link = "/filter/";
+    link = "/news/filter/";
   }
 
   return (

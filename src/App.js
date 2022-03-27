@@ -15,11 +15,14 @@ function App() {
         <Routes>
           {/* <Route path="/gallery/video" element={<DrawingVideo />} /> */}
           <Route path="*" element={<NotFound />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/banner/:article" element={<BannerPage />} />
-          <Route path="/article/:article" element={<ArticleTopPage />} />
-          <Route path="/guide/:article" element={<ArticleGuidePage />} />
-          <Route path="/filter/:article" element={<ArticleFiltersPage />} />
+          <Route path="/news/" element={<Home />} />
+          <Route path="/news/banner/:article" element={<BannerPage />} />
+          <Route path="/news/article/:article" element={<ArticleTopPage />} />
+          <Route path="/news/guide/:article" element={<ArticleGuidePage />} />
+          <Route
+            path="/news/filter/:article"
+            element={<ArticleFiltersPage />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

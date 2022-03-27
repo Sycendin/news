@@ -56,7 +56,7 @@ const Backgroundimage = () => {
             ></Image>
             <Carousel.Caption>
               <h3 className="stroke-text">Elden Ring</h3>
-              <Link to="/banner/eldenring">
+              <Link to="/news/banner/eldenring">
                 <Button onClick={() => change(0)}>Check it Out.</Button>
               </Link>
             </Carousel.Caption>
@@ -81,7 +81,7 @@ const Backgroundimage = () => {
             <Carousel.Caption>
               <h3 className="stroke-text">Ghostwire Tokyo</h3>
 
-              <Link to="/banner/ghostwire">
+              <Link to="/news/banner/ghostwire">
                 <Button onClick={() => change(1)}>Check it Out.</Button>
               </Link>
             </Carousel.Caption>
@@ -105,7 +105,7 @@ const Backgroundimage = () => {
             <Carousel.Caption>
               <h3 className="stroke-text">Kirby and the Forgotten Land</h3>
 
-              <Link to="/banner/kirby">
+              <Link to="/news/banner/kirby">
                 <Button onClick={() => change(2)}>Check it Out.</Button>
               </Link>
             </Carousel.Caption>
