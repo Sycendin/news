@@ -10,12 +10,15 @@
   z-index: 1000;
   cursor: pointer;
 }
-.img {
-  transition: all 0.2s ease-in-out;
-  border-radius: 10px;
+
+.img-hover-zoom {
+  overflow: hidden;
 }
-.img:hover {
-  transform: scale(1.1);
-  z-index: 1000;
-  cursor: pointer;
+
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.2);
 }

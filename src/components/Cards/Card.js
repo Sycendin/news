@@ -47,6 +47,7 @@ const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
             }}
           >
             <div
+              className="img-hover-zoom"
               style={{
                 display: "flex",
                 justifyContent: "center",
