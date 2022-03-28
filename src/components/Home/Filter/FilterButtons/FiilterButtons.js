@@ -26,7 +26,14 @@ const FilterButtons = () => {
   };
   return (
     <Fragment>
-      <div>
+      <div
+        style={{
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
+          width: "100%",
+        }}
+      >
         <Button
           style={{ marginLeft: 20, marginRight: 10, borderRadius: 20 }}
           onClick={() => changeFilter("nintendo")}

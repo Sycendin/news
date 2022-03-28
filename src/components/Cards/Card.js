@@ -27,7 +27,11 @@ const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
               marginLeft: 5,
             }}
           >
-            <Card.Img variant="top" src={process.env.PUBLIC_URL + image} />
+            <Card.Img
+              variant="top"
+              src={process.env.PUBLIC_URL + image}
+              alt={i}
+            />
             <Card.Title style={{ color: "black" }}>{title}</Card.Title>
           </Card>
         </Link>
@@ -42,13 +46,22 @@ const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
               marginTop: 10,
             }}
           >
-            <img
-              className="img"
-              style={{ maxWidth: "40%", height: "auto" }}
-              src={process.env.PUBLIC_URL + image}
-              alt={i}
-            />
-
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                maxWidth: "40%",
+                maxWHeight: "auto",
+              }}
+            >
+              <img
+                className="img"
+                style={{ maxWidth: "100%", maxWHeight: "auto" }}
+                src={process.env.PUBLIC_URL + image}
+                alt={i}
+              />
+            </div>
             <div
               style={{
                 display: "flex",
