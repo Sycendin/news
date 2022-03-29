@@ -10,3 +10,10 @@
 .carousel-control-next-icon {
   background-image: url("https://cdn.discordapp.com/attachments/788247984517283880/954260929636364398/nextarrow.png") !important;
 }
+
+.carousel-indicators [data-bs-target] {
+  width: 30px !important;
+  height: 10px !important;
+  border: 1px solid transparent !important;
+  border-radius: 5px;
+}
