@@ -50,7 +50,7 @@ const ArticleTopPage = () => {
               width: "100%",
               marginLeft: "auto",
               marginRight: "auto",
-              height: 400,
+              height: "auto",
             }}
           ></img>
 

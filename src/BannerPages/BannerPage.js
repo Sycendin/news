@@ -57,9 +57,7 @@ const BannerPage = () => {
             alt="banner"
             style={{
               width: "100%",
-              marginLeft: "auto",
-              marginRight: "auto",
-              height: 400,
+              height: "auto",
             }}
           ></img>
 

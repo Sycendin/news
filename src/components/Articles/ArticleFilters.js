@@ -68,8 +68,7 @@ const ArticleFiltersPage = () => {
               marginLeft: 10,
             }}
           >
-            Filler subtitle
-            {/* {storiesData[select].subtitle} */}
+            {data[select].text}
           </h3>
           <img
             src={`${process.env.PUBLIC_URL + data[select].image}`}
@@ -78,7 +77,7 @@ const ArticleFiltersPage = () => {
               width: "100%",
               marginLeft: "auto",
               marginRight: "auto",
-              height: 400,
+              height: "auto",
             }}
           ></img>
 

@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import SingleCard from "./Card";
 const CardList = ({ type, info, displayDirection, marginColumn }) => {
+  const lastestGuideAndTopstories = info.slice(-4);
   return (
     <Fragment>
       <div
@@ -11,16 +12,42 @@ const CardList = ({ type, info, displayDirection, marginColumn }) => {
         }}
       >
         {info.map((data, i) => {
-          return (
-            <SingleCard
-              key={i}
-              title={info[i].title}
-              image={info[i].image}
-              marginColumn={marginColumn}
-              text={info[i].text}
-              type={type}
-            />
-          );
+          // Only display 4 items from guid and topstories on the front page
+          if (type === "guide" || type === "top") {
+            return (
+              <SingleCard
+                key={i}
+                title={
+                  lastestGuideAndTopstories[
+                    lastestGuideAndTopstories.length - 1 - i
+                  ].title
+                }
+                image={
+                  lastestGuideAndTopstories[
+                    lastestGuideAndTopstories.length - 1 - i
+                  ].image
+                }
+                marginColumn={marginColumn}
+                text={
+                  lastestGuideAndTopstories[
+                    lastestGuideAndTopstories.length - 1 - i
+                  ].text
+                }
+                type={type}
+              />
+            );
+          } else {
+            return (
+              <SingleCard
+                key={i}
+                title={info[info.length - 1 - i].title}
+                image={info[info.length - 1 - i].image}
+                marginColumn={marginColumn}
+                text={info[info.length - 1 - i].text}
+                type={type}
+              />
+            );
+          }
         })}
       </div>
     </Fragment>
