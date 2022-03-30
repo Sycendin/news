@@ -37,6 +37,11 @@ const CardList = ({ type, info, displayDirection, marginColumn }) => {
                   ].text
                 }
                 type={type}
+                path={
+                  lastestGuideAndTopstories[
+                    lastestGuideAndTopstories.length - 1 - i
+                  ].path
+                }
               />
             );
           } else {
@@ -48,6 +53,7 @@ const CardList = ({ type, info, displayDirection, marginColumn }) => {
                 marginColumn={marginColumn}
                 text={info[info.length - 1 - i].text}
                 type={type}
+                path={info[info.length - 1 - i].path}
               />
             );
           }

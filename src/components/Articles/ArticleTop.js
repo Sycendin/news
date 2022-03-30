@@ -1,16 +1,17 @@
 import React, { Fragment } from "react";
 import Image from "react-bootstrap/Image";
-import { useSelector } from "react-redux";
-import { topStoriesPaths } from "../PathNames/PathNames";
+
 import storiesData from "../Home/TopStories/StoriesData";
 import NotFound from "../NotFound/NotFound";
 import { PathFinder } from "../../HelperFunctions/HelperFunctions";
 const ArticleTopPage = () => {
+  let error = false;
   // Helper function checks the url and loads correct data based
   // on what section it is
-  let foundPath = PathFinder(topStoriesPaths, "top");
-  let error = foundPath;
-  const select = useSelector((state) => state.topStoriesChange);
+  let foundPath = PathFinder(storiesData, "top");
+  if (foundPath === true) {
+    error = foundPath;
+  }
   return (
     <Fragment>
       {error === false ? (
@@ -31,7 +32,7 @@ const ArticleTopPage = () => {
               marginLeft: 10,
             }}
           >
-            {storiesData[select].title}
+            {foundPath.title}
           </h1>
           <h3
             style={{
@@ -44,7 +45,7 @@ const ArticleTopPage = () => {
             {/* {storiesData[select].subtitle} */}
           </h3>
           <img
-            src={`${process.env.PUBLIC_URL + storiesData[select].image}`}
+            src={`${process.env.PUBLIC_URL + foundPath.image}`}
             alt="banner"
             style={{
               width: "100%",

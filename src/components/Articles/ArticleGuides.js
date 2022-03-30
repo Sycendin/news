@@ -1,17 +1,17 @@
 import React, { Fragment } from "react";
 import Image from "react-bootstrap/Image";
-import { useSelector } from "react-redux";
-import { guidePaths } from "../PathNames/PathNames";
+
 import guideData from "../Home/Guide/GuideData";
 import NotFound from "../NotFound/NotFound";
 import { PathFinder } from "../../HelperFunctions/HelperFunctions";
 const ArticleGuidePage = () => {
+  let error = false;
   // Helper function checks the url and loads correct data based
   // on what section it is
-  let foundPath = PathFinder(guidePaths, "guide");
-  let error = foundPath;
-
-  const select = useSelector((state) => state.guideChange);
+  let foundPath = PathFinder(guideData, "guide");
+  if (foundPath === true) {
+    error = foundPath;
+  }
   return (
     <Fragment>
       {error === false ? (
@@ -32,7 +32,7 @@ const ArticleGuidePage = () => {
               marginLeft: 10,
             }}
           >
-            {guideData[select].title}
+            {foundPath.title}
           </h1>
           <h3
             style={{
@@ -45,7 +45,7 @@ const ArticleGuidePage = () => {
             {/* {storiesData[select].subtitle} */}
           </h3>
           <img
-            src={`${process.env.PUBLIC_URL + guideData[select].image}`}
+            src={`${process.env.PUBLIC_URL + foundPath.image}`}
             alt="banner"
             style={{
               width: "100%",

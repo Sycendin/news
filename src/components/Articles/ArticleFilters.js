@@ -7,35 +7,25 @@ import playstationData from "../Home/Filter/FilterContent/Playstation";
 import xboxData from "../Home/Filter/FilterContent/Xbox";
 import pcData from "../Home/Filter/FilterContent/PC";
 import otherData from "../Home/Filter/FilterContent/Other";
-import { filterPaths } from "../PathNames/PathNames";
 const ArticleFiltersPage = () => {
-  let error = false;
   let data = {};
-  let select = 0;
-
-  const currentUrl = window.location.pathname;
-  let foundPath = filterPaths.find(
-    (singlePath) => singlePath.path === currentUrl
-  );
-
-  // If url exists render page normally
-  if (foundPath !== undefined) {
-    if (foundPath.type === "nintendo") {
-      data = nintendoData;
-    } else if (foundPath.type === "playstation") {
-      data = playstationData;
-    } else if (foundPath.type === "xbox") {
-      data = xboxData;
-    } else if (foundPath.type === "pc") {
-      data = pcData;
-    } else if (foundPath.type === "other") {
-      data = otherData;
-    }
-    select = foundPath.content;
+  let error = false;
+  const firstPath = window.location.pathname.split("/")[3];
+  if (firstPath === "nin") {
+    data = nintendoData;
+  } else if (firstPath === "xbox") {
+    data = xboxData;
+  } else if (firstPath === "play") {
+    data = playstationData;
+  } else if (firstPath === "pc") {
+    data = pcData;
+  } else if (firstPath === "other") {
+    data = otherData;
   }
 
-  // Otherwise set error to true to render the NotFound component instead
-  else {
+  const currentUrl = window.location.pathname;
+  let foundPath = data.find((singlePath) => singlePath.path === currentUrl);
+  if (foundPath === undefined) {
     error = true;
   }
 
@@ -59,7 +49,7 @@ const ArticleFiltersPage = () => {
               marginLeft: 10,
             }}
           >
-            {data[select].title}
+            {foundPath.title}
           </h1>
           <h3
             style={{
@@ -68,10 +58,10 @@ const ArticleFiltersPage = () => {
               marginLeft: 10,
             }}
           >
-            {data[select].text}
+            {foundPath.text}
           </h3>
           <img
-            src={`${process.env.PUBLIC_URL + data[select].image}`}
+            src={`${process.env.PUBLIC_URL + foundPath.image}`}
             alt="banner"
             style={{
               width: "100%",

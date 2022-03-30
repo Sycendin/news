@@ -20,7 +20,7 @@ function App() {
           <Route path="/news/article/:article" element={<ArticleTopPage />} />
           <Route path="/news/guide/:article" element={<ArticleGuidePage />} />
           <Route
-            path="/news/filter/:article"
+            path="/news/filter/:type/:article/"
             element={<ArticleFiltersPage />}
           />
         </Routes>

@@ -3,20 +3,11 @@ import { Card } from "react-bootstrap";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
-const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
-  let link = "";
-  if (type === "top") {
-    link = "/news/article/";
-  } else if (type === "guide") {
-    link = "/news/guide/";
-  } else if (type === "filter") {
-    link = "/news/filter/";
-  }
-
+const SingleCard = ({ i, title, image, marginColumn, text, type, path }) => {
   return (
     <Fragment>
       {marginColumn !== 20 ? (
-        <Link to={link + title}>
+        <Link to={path}>
           <Card
             key={i}
             border="dark"
@@ -38,7 +29,7 @@ const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
           </Card>
         </Link>
       ) : (
-        <Link to={link + title}>
+        <Link to={path}>
           <div
             className="block-example border-bottom border-dark"
             style={{
