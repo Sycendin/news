@@ -57,9 +57,9 @@ const Backgroundimage = () => {
               responsive="true"
             ></Image>
             <Carousel.Caption>
-              <h3 className="stroke-text">Elden Ring</h3>
-              <Link to="/news/banner/eldenring">
-                <Button onClick={() => change(0)}>Check it Out.</Button>
+              <h3 className="stroke-text">{latestBanners[2].title}</h3>
+              <Link to={"/news/banner/" + latestBanners[2].title}>
+                <Button onClick={() => change(2)}>Check it Out.</Button>
               </Link>
             </Carousel.Caption>
           </Carousel.Item>
@@ -81,9 +81,9 @@ const Backgroundimage = () => {
               }}
             ></Image>
             <Carousel.Caption>
-              <h3 className="stroke-text">Ghostwire Tokyo</h3>
+              <h3 className="stroke-text">{latestBanners[1].title}</h3>
 
-              <Link to="/news/banner/ghostwire">
+              <Link to={"/news/banner/" + latestBanners[1].title}>
                 <Button onClick={() => change(1)}>Check it Out.</Button>
               </Link>
             </Carousel.Caption>
@@ -105,10 +105,10 @@ const Backgroundimage = () => {
               responsive="true"
             ></Image>
             <Carousel.Caption>
-              <h3 className="stroke-text">Kirby and the Forgotten Land</h3>
+              <h3 className="stroke-text">{latestBanners[0].title}</h3>
 
-              <Link to="/news/banner/kirby">
-                <Button onClick={() => change(2)}>Check it Out.</Button>
+              <Link to={"/news/banner/" + latestBanners[0].title}>
+                <Button onClick={() => change(0)}>Check it Out.</Button>
               </Link>
             </Carousel.Caption>
           </Carousel.Item>

@@ -1,15 +1,15 @@
 export const paths = [
   {
-    path: "/news/banner/eldenring",
-    content: 0,
+    path: "/news/banner/Elden%20Ring",
+    content: 2,
   },
   {
-    path: "/news/banner/ghostwire",
+    path: "/news/banner/Kirby%20And%20The%20Forgotten%20Land",
     content: 1,
   },
   {
-    path: "/news/banner/kirby",
-    content: 2,
+    path: "/news/banner/GhostWire%20Tokyo",
+    content: 0,
   },
 ];
 
