@@ -25,12 +25,14 @@ const SingleCard = ({ i, title, image, marginColumn, text, type }) => {
               marginBottom: marginColumn,
               marginRight: 5,
               marginLeft: 5,
+              maxWidth: 284,
             }}
           >
             <Card.Img
               variant="top"
               src={process.env.PUBLIC_URL + image}
               alt={i}
+              style={{}}
             />
             <Card.Title style={{ color: "black" }}>{title}</Card.Title>
           </Card>

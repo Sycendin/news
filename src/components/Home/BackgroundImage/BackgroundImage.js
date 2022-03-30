@@ -3,8 +3,10 @@ import { Image, Carousel, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { changeBanner } from "../../../actions/actions";
+import bannerData from "../../../BannerPages/BannerPageData/BannerData";
 import "./BackgroundImage.css";
 const Backgroundimage = () => {
+  const latestBanners = bannerData.slice(-3);
   const dispatch = useDispatch();
   // const counter = useSelector((state) => state.counterReducer);
   const change = (filter) => {
@@ -45,7 +47,7 @@ const Backgroundimage = () => {
             }}
           >
             <Image
-              src={process.env.PUBLIC_URL + "/images/background3c.jpg"}
+              src={process.env.PUBLIC_URL + latestBanners[2].image}
               style={{
                 width: "100%",
                 marginLeft: "auto",
@@ -69,7 +71,7 @@ const Backgroundimage = () => {
             }}
           >
             <Image
-              src={process.env.PUBLIC_URL + "/images/ghostwirec.jpg"}
+              src={process.env.PUBLIC_URL + latestBanners[1].image}
               responsive="true"
               style={{
                 width: "100%",
@@ -93,7 +95,7 @@ const Backgroundimage = () => {
             }}
           >
             <Image
-              src={process.env.PUBLIC_URL + "/images/kirbyc.jpg"}
+              src={process.env.PUBLIC_URL + latestBanners[0].image}
               style={{
                 width: "100%",
                 marginLeft: "auto",
