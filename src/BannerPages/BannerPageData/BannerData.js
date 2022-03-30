@@ -1,6 +1,7 @@
 const bannerData = [
   {
-    title: "New Release: GhostWire Tokyo",
+    title: "GhostWire Tokyo",
+    articleTitle: "New Release: GhostWire Tokyo",
     subtitle: "Face the unknown, uncover the truth and save the city",
     image: "/images/ghostwirec.webp",
     text: [
@@ -14,7 +15,8 @@ const bannerData = [
     ],
   },
   {
-    title: "New Release: Kirby And The Forgotten Land",
+    title: "Kirby And The Forgotten Land",
+    articleTitle: "Kirby And The Forgotten Land",
     subtitle: "Kirby takes on a new adventure",
     image: "/images/kirbyc.webp",
     text: [
@@ -31,7 +33,8 @@ const bannerData = [
     ],
   },
   {
-    title: "New Release: Elden Ring",
+    title: "Elden Ring",
+    articleTitle: "New Release: Elden Ring",
     subtitle: "Prepare to die many times.",
     image: "/images/background3c.webp",
     text: [

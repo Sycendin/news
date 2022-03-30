@@ -41,7 +41,7 @@ const BannerPage = () => {
               marginLeft: 10,
             }}
           >
-            {bannerData[select].title}
+            {bannerData[select].articleTitle}
           </h1>
           <h3
             style={{
