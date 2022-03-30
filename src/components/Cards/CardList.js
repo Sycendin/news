@@ -14,6 +14,9 @@ const CardList = ({ type, info, displayDirection, marginColumn }) => {
         {info.map((data, i) => {
           // Only display 4 items from guid and topstories on the front page
           if (type === "guide" || type === "top") {
+            if (type === "top") {
+              marginColumn = 30;
+            }
             return (
               <SingleCard
                 key={i}
@@ -25,7 +28,7 @@ const CardList = ({ type, info, displayDirection, marginColumn }) => {
                 image={
                   lastestGuideAndTopstories[
                     lastestGuideAndTopstories.length - 1 - i
-                  ].image
+                  ].imageSmall
                 }
                 marginColumn={marginColumn}
                 text={
@@ -41,7 +44,7 @@ const CardList = ({ type, info, displayDirection, marginColumn }) => {
               <SingleCard
                 key={i}
                 title={info[info.length - 1 - i].title}
-                image={info[info.length - 1 - i].image}
+                image={info[info.length - 1 - i].imageSmall}
                 marginColumn={marginColumn}
                 text={info[info.length - 1 - i].text}
                 type={type}
