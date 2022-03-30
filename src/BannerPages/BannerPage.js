@@ -6,21 +6,15 @@ import TextList from "../components/TextList/TextList";
 import { paths } from "../components/PathNames/PathNames";
 import { changeBanner } from "../actions/actions";
 import NotFound from "../components/NotFound/NotFound";
+import { PathFinder } from "../HelperFunctions/HelperFunctions";
 const BannerPage = () => {
   let error = false;
-  const dispatch = useDispatch();
-  const currentUrl = window.location.pathname;
-  let foundPath = paths.find((singlePath) => singlePath.path === currentUrl);
-  // If url exists render page normally
-  if (foundPath !== undefined) {
-    dispatch(changeBanner(foundPath.content));
+  // Helper function checks the url and loads correct data based
+  // on what section it is
+  let foundPath = PathFinder(bannerData, "banner");
+  if (foundPath === true) {
+    error = foundPath;
   }
-  // Otherwise set error to true to render the NotFound component instead
-  else {
-    error = true;
-  }
-  // dispatch(changeBanner(obj.content));
-  const select = useSelector((state) => state.bannerChange);
   return (
     <Fragment>
       {error === false ? (
@@ -41,7 +35,7 @@ const BannerPage = () => {
               marginLeft: 10,
             }}
           >
-            {bannerData[select].articleTitle}
+            {foundPath.articleTitle}
           </h1>
           <h3
             style={{
@@ -50,10 +44,10 @@ const BannerPage = () => {
               marginLeft: 10,
             }}
           >
-            {bannerData[select].subtitle}
+            {foundPath.subtitle}
           </h3>
           <img
-            src={`${process.env.PUBLIC_URL + bannerData[select].image}`}
+            src={`${process.env.PUBLIC_URL + foundPath.image}`}
             alt="banner"
             style={{
               width: "100%",
@@ -93,7 +87,7 @@ const BannerPage = () => {
             </p>
           </div>
           <div>
-            <TextList data={bannerData[select].text} />
+            <TextList data={foundPath.text} />
           </div>
           {/* <h3 style={{ whiteSpace: "pre-line" }}>{bannerData[select].text}</h3> */}
         </div>

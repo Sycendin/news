@@ -50,10 +50,12 @@ const Backgroundimage = () => {
               src={process.env.PUBLIC_URL + latestBanners[2].image}
               style={{
                 width: "100%",
+                height: "auto",
                 marginLeft: "auto",
                 marginRight: "auto",
                 borderRadius: 10,
               }}
+              alt="banner1"
               responsive="true"
             ></Image>
             <Carousel.Caption>
@@ -75,10 +77,12 @@ const Backgroundimage = () => {
               responsive="true"
               style={{
                 width: "100%",
+                height: "auto",
                 marginLeft: "auto",
                 marginRight: "auto",
                 borderRadius: 10,
               }}
+              alt="banner2"
             ></Image>
             <Carousel.Caption>
               <h3 className="stroke-text">{latestBanners[1].title}</h3>
@@ -98,10 +102,12 @@ const Backgroundimage = () => {
               src={process.env.PUBLIC_URL + latestBanners[0].image}
               style={{
                 width: "100%",
+                height: "auto",
                 marginLeft: "auto",
                 marginRight: "auto",
                 borderRadius: 10,
               }}
+              alt="banner3"
               responsive="true"
             ></Image>
             <Carousel.Caption>

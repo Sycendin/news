@@ -12,8 +12,12 @@
 }
 
 .carousel-indicators [data-bs-target] {
-  width: 30px !important;
-  height: 10px !important;
+  width: 40px !important;
+  height: 20px !important;
   border: 1px solid transparent !important;
   border-radius: 5px;
+}
+
+.carousel-caption {
+  margin-bottom: 20px !important;
 }

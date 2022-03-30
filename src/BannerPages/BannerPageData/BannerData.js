@@ -1,5 +1,6 @@
 const bannerData = [
   {
+    path: "/news/banner/GhostWire%20Tokyo",
     title: "GhostWire Tokyo",
     articleTitle: "New Release: GhostWire Tokyo",
     subtitle: "Face the unknown, uncover the truth and save the city",
@@ -15,6 +16,7 @@ const bannerData = [
     ],
   },
   {
+    path: "/news/banner/Kirby%20And%20The%20Forgotten%20Land",
     title: "Kirby And The Forgotten Land",
     articleTitle: "Kirby And The Forgotten Land",
     subtitle: "Kirby takes on a new adventure",
@@ -33,6 +35,7 @@ const bannerData = [
     ],
   },
   {
+    path: "/news/banner/Elden%20Ring",
     title: "Elden Ring",
     articleTitle: "New Release: Elden Ring",
     subtitle: "Prepare to die many times.",
