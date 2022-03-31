@@ -61,7 +61,7 @@ const ArticleFiltersPage = () => {
             {foundPath.text}
           </h3>
           <img
-            src={`${process.env.PUBLIC_URL + foundPath.image}`}
+            src={`${foundPath.image}`}
             alt="banner"
             style={{
               width: "100%",

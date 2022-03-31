@@ -7,6 +7,7 @@ import bannerData from "../../../BannerPages/BannerPageData/BannerData";
 import { debounce } from "../../../HelperFunctions/HelperFunctions";
 import "./BackgroundImage.css";
 const Backgroundimage = () => {
+  //process.env.PUBLIC_URL + latestBanners[1].image
   // State that keep track of the screen witdh
   const [screenWidth, setDimensions] = useState({
     width: window.innerWidth,
@@ -74,8 +75,8 @@ const Backgroundimage = () => {
             <Image
               src={
                 screenWidth.width > 600
-                  ? process.env.PUBLIC_URL + latestBanners[2].image
-                  : process.env.PUBLIC_URL + latestBanners[2].smallImage
+                  ? latestBanners[2].image
+                  : latestBanners[2].smallImage
               }
               style={{
                 width: "100%",
@@ -104,8 +105,8 @@ const Backgroundimage = () => {
             <Image
               src={
                 screenWidth.width > 600
-                  ? process.env.PUBLIC_URL + latestBanners[1].image
-                  : process.env.PUBLIC_URL + latestBanners[1].smallImage
+                  ? latestBanners[1].image
+                  : latestBanners[1].smallImage
               }
               responsive="true"
               style={{
@@ -134,8 +135,8 @@ const Backgroundimage = () => {
             <Image
               src={
                 screenWidth.width > 600
-                  ? process.env.PUBLIC_URL + latestBanners[0].image
-                  : process.env.PUBLIC_URL + latestBanners[0].smallImage
+                  ? latestBanners[0].image
+                  : latestBanners[0].smallImage
               }
               style={{
                 width: "100%",

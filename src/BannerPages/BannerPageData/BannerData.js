@@ -4,8 +4,10 @@ const bannerData = [
     title: "GhostWire Tokyo",
     articleTitle: "New Release: GhostWire Tokyo",
     subtitle: "Face the unknown, uncover the truth and save the city",
-    image: "/images/ghostwirec.webp",
-    smallImage: "/images/ghostwirebannersmall.webp",
+    image:
+      "https://cdn.discordapp.com/attachments/958975018816131132/958975663958806528/ghostwirec.webp",
+    smallImage:
+      "https://cdn.discordapp.com/attachments/958975018816131132/958975097929105458/ghostwirebannersmall.webp",
     text: [
       "--Tokyo is overrun by deadly supernatural forces, perpetrated by a dangerous occultist, causing Tokyo’s population to vanish in an instant. Ally with a powerful spectral entity on their quest for vengeance and master a powerful arsenal of abilities to unravel the dark truth behind the disappearance as you FACE THE UNKNOWN in Ghostwire: Tokyo.",
       "--A Beautifully Haunted tokyo",
@@ -21,8 +23,10 @@ const bannerData = [
     title: "Kirby And The Forgotten Land",
     articleTitle: "Kirby And The Forgotten Land",
     subtitle: "Kirby takes on a new adventure",
-    image: "/images/kirbyc.webp",
-    smallImage: "/images/kirbybannersmall.webp",
+    image:
+      "https://cdn.discordapp.com/attachments/958975018816131132/958975664621518858/kirbyc.webp",
+    smallImage:
+      "https://cdn.discordapp.com/attachments/958975018816131132/958975664306929684/kirbybannersmall.webp",
     text: [
       "==Float off on an all-new adventure as the powerful puffball, Kirby. Explore in 3D stages as you discover a mysterious world with abandoned structures from a past civilization—like a shopping mall?! Copy enemies’ abilities like the new Drill and Ranger and use them to attack, explore your surroundings, and save the kidnapped Waddle Dees from the ferocious Beast Pack alongside the mysterious Elfilin. Hope you’re hungry for an unforgettable adventure!",
 
@@ -41,8 +45,10 @@ const bannerData = [
     title: "Elden Ring",
     articleTitle: "New Release: Elden Ring",
     subtitle: "Prepare to die many times.",
-    image: "/images/background3c.webp",
-    smallImage: "/images/eldenbannersmall.webp",
+    image:
+      "https://cdn.discordapp.com/attachments/958975018816131132/958975097346084864/eldenbanner.webp",
+    smallImage:
+      "https://cdn.discordapp.com/attachments/958975018816131132/958975097631301632/eldenbannersmall.webp",
     text: [
       "--THE NEW FANTASY ACTION RPG",
       "==Rise, Tarnished, and be guided by grace to \

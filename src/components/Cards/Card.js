@@ -21,9 +21,11 @@ const SingleCard = ({ i, title, image, marginColumn, text, type, path }) => {
           >
             <Card.Img
               variant="top"
-              src={process.env.PUBLIC_URL + image}
-              alt={i}
-              style={{}}
+              src={image}
+              alt="Card"
+              width={284}
+              height={160}
+              style={{ Width: "100%", height: "auto" }}
             />
             <Card.Title style={{ color: "black" }}>{title}</Card.Title>
           </Card>
@@ -31,11 +33,12 @@ const SingleCard = ({ i, title, image, marginColumn, text, type, path }) => {
       ) : (
         <Link to={path}>
           <div
-            className="block-example border-bottom border-dark"
+            className="block-example border-bottom border-top border-dark"
             style={{
               display: "flex",
               flexDirection: "row",
               borderBottom: "3px solid rgb(212, 212, 212)",
+
               marginTop: 10,
             }}
           >
@@ -50,10 +53,15 @@ const SingleCard = ({ i, title, image, marginColumn, text, type, path }) => {
               }}
             >
               <img
+                width={284}
+                height={160}
                 className="img"
-                style={{ maxWidth: "100%", maxWHeight: "auto" }}
-                src={process.env.PUBLIC_URL + image}
-                alt={i}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                src={image}
+                alt="Card"
               />
             </div>
             <div
@@ -63,9 +71,19 @@ const SingleCard = ({ i, title, image, marginColumn, text, type, path }) => {
                 textAlign: "left",
               }}
             >
-              <h3 style={{ color: "black", marginTop: 10, marginLeft: 10 }}>
+              <p
+                style={{
+                  display: "block",
+                  fontSize: 25,
+                  marginBottom: 16,
+                  fontWeight: "bold",
+                  color: "black",
+                  marginTop: 10,
+                  marginLeft: 10,
+                }}
+              >
                 {title}
-              </h3>
+              </p>
               <p style={{ color: "black", marginLeft: 10 }}>{text}</p>
             </div>
           </div>

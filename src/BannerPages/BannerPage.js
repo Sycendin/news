@@ -1,10 +1,7 @@
 import React, { Fragment } from "react";
 import Image from "react-bootstrap/Image";
-import { useDispatch, useSelector } from "react-redux";
 import bannerData from "./BannerPageData/BannerData";
 import TextList from "../components/TextList/TextList";
-import { paths } from "../components/PathNames/PathNames";
-import { changeBanner } from "../actions/actions";
 import NotFound from "../components/NotFound/NotFound";
 import { PathFinder } from "../HelperFunctions/HelperFunctions";
 const BannerPage = () => {
@@ -47,7 +44,7 @@ const BannerPage = () => {
             {foundPath.subtitle}
           </h3>
           <img
-            src={`${process.env.PUBLIC_URL + foundPath.image}`}
+            src={`${foundPath.image}`}
             alt="banner"
             style={{
               width: "100%",
