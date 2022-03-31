@@ -1,14 +1,40 @@
-import React, { Fragment } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { Image, Carousel, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { changeBanner } from "../../../actions/actions";
 import bannerData from "../../../BannerPages/BannerPageData/BannerData";
+import { debounce } from "../../../HelperFunctions/HelperFunctions";
 import "./BackgroundImage.css";
 const Backgroundimage = () => {
+  // State that keep track of the screen witdh
+  const [screenWidth, setDimensions] = useState({
+    width: window.innerWidth,
+  });
+
+  // After rendering add event listener that calls function when screen
+  // is resized, then call debounced function that will set the new width
+  // and re-render
+
+  // imported debounce function will only allow resize function to run every second
+  // To improve performance
+
+  // Afterwards return and clean up event listeners to stop memory leaks
+  useEffect(() => {
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        width: window.innerWidth,
+      });
+    }, 1000);
+    window.addEventListener("resize", debouncedHandleResize);
+    return (_) => {
+      window.removeEventListener("resize", debouncedHandleResize);
+    };
+  });
+
   const latestBanners = bannerData.slice(-3);
   const dispatch = useDispatch();
-  // const counter = useSelector((state) => state.counterReducer);
+
   const change = (filter) => {
     if (filter === 0) {
       dispatch(changeBanner(0));
@@ -42,12 +68,15 @@ const Backgroundimage = () => {
           <Carousel.Item
             style={{
               width: "100%",
-
               borderRadius: 10,
             }}
           >
             <Image
-              src={process.env.PUBLIC_URL + latestBanners[2].image}
+              src={
+                screenWidth.width > 600
+                  ? process.env.PUBLIC_URL + latestBanners[2].image
+                  : process.env.PUBLIC_URL + latestBanners[2].smallImage
+              }
               style={{
                 width: "100%",
                 height: "auto",
@@ -73,7 +102,11 @@ const Backgroundimage = () => {
             }}
           >
             <Image
-              src={process.env.PUBLIC_URL + latestBanners[1].image}
+              src={
+                screenWidth.width > 600
+                  ? process.env.PUBLIC_URL + latestBanners[1].image
+                  : process.env.PUBLIC_URL + latestBanners[1].smallImage
+              }
               responsive="true"
               style={{
                 width: "100%",
@@ -99,7 +132,11 @@ const Backgroundimage = () => {
             }}
           >
             <Image
-              src={process.env.PUBLIC_URL + latestBanners[0].image}
+              src={
+                screenWidth.width > 600
+                  ? process.env.PUBLIC_URL + latestBanners[0].image
+                  : process.env.PUBLIC_URL + latestBanners[0].smallImage
+              }
               style={{
                 width: "100%",
                 height: "auto",
